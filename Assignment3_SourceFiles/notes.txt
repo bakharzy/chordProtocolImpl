@@ -1,0 +1,28 @@
+###
+# Distributed Systems Project Assignment 3clear
+# Chris Blythe - 14258961
+# Farbod Faghihi Berenjegani - 014343410
+# Mohammad Bakharzy - 014083589
+###
+
+Generate config file: number of nodes (power of 2) (created config.txt)
+python configGenerator.py 1024
+
+test all nodes based on config file: config file, number of messages
+python testOverlay.py config.txt 1000
+
+INSTRUCTIONS FOR DISTRIBUTED RUNNING
+
+Log into 4 ukko nodes listed in config.txt...
+
+ukko049, ukko050, ukko026, ukko052
+
+Log into another ukko node for running test
+
+On 4 ukko nodes run wrapper script to launch 256 nodes on that ukko node...
+./wraper.sh config.txt
+
+after all of the servers on previous four nodes started to listen then run the test script on the fifth node
+python testOverlay.py config.txt 1000
+
+The results will be written into 4 different files in the testing folder
